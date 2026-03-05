@@ -1,8 +1,10 @@
-n1 = input("Digite algum número:" )
-se = n1.split()
-print(se)
-print("Unidade {}".format(se[3]))
-print("Dezena {}".format(se[2]))
-print("Centena {}".format(se[1]))
-print("milhar {}".format(se[0]))
+n1 = int(input("Digite algum número:" ))
+u = n1 // 1 % 10
+d = n1 // 10 % 10
+c = n1 // 100 % 10
+m = n1 // 1000 % 10
+print("Unidade {}".format(u))
+print("Dezena {}".format(d))
+print("Centena {}".format(c))
+print("milhar {}".format(m))
 

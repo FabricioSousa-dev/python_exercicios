@@ -1,2 +1,2 @@
-n = str(input("Digite seu nome: "))
-print("Tem silva nesse nome? ","Silva" in n)
+n = str(input("Digite seu nome: ")).strip()
+print("Tem silva nesse nome? {}".format("silva" in n.lower()))
