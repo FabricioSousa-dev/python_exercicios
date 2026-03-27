@@ -1,6 +1,8 @@
 v = int(input("Qual a  velocidade do seu veículo? "))
-m = 7 * v
+m = (v - 80) * 7.00
 
 if v > 80:
  print("Você foi multado!")
- print("EM {}R$".format(m))
+ print("Em {:.2f}R$".format(m))
+else:
+ print("Siga seu caminho!")
