@@ -1,15 +1,15 @@
-import random
+from random import randint
 
-print("Em qual número inteiro estou pensando? ")
-p = int(input("Será que é? "))
+print("what number am i thinking of? ")
+player = int(input("Is it? "))
 
-print("Você acha que é {}".format(p))
+print("Do you think it is {}".format(player))
 
-num = random.randint(0, 5)
+computer = randint(0, 5)
 
-if p == num:
-    print("você acertou!")
+if player == computer:
+    print("you correct!")
 
 else:
-    print("Errou!")
+    print("Damnit!")
 
