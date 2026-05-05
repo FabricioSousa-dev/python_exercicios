@@ -7,3 +7,4 @@ elif n2 > n1:
     print("O {} é maior que o {}".format(n2, n1))
 else:
     print("Os dois são iguais ")
+

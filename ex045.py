@@ -1,6 +1,10 @@
 from random import choice
 
-j = str(input("Qual a sua jogada?"))
+j = str(input('''
+pedra
+papel
+Tesoura
+Qual a sua jogada?'''))
 lista = ["pedra", "papel", "tesoura"]
 
 

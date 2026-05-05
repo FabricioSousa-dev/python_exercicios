@@ -7,7 +7,8 @@ b = agora - i
 if b == 18:
     print("Você pode se alistar!")
 elif b < 18:
+    saldo = b - 18
     print("Você ainda não pode se alistar!")
-    print("Falta{} ano ".format(b-18))
+    print("Falta {} ano ".format(saldo))
 else:
     print("Você ja passou da idade,se aliste o quanto antes!")
