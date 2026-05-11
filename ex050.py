@@ -1,11 +1,11 @@
 s = 0
-for c in range(0,6):
-    n = int(input("Qual o valor: "))
+cont = 0
+for c in range(1,7):
+    n = int(input("Qual o {}ª valor: ".format(c)))
     if n % 2 == 0:
       s += n
-    else:
-        print("{} é impar".format(n))
-print("O somatorio de todos os valores é {} ".format(s))
+      cont += 1
+print("O somatorio de todos os {} valores é {} ".format(cont,s))
 
 
 
