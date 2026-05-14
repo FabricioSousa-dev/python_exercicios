@@ -1,12 +1,14 @@
-totmaior = 0
-totmenor = 0
 for c in range(1,6):
-    p = float(input("Digite o seu peso: "))
+    peso = float(input("Digite peso da {} pessoa: ".format(c)))
     if c == 1:
-        totmaior += 1
+        maior = peso
+        menor = peso
     else:
-        totmenor += 1
-print("A {} pessoa é mais pesada da lista".format(totmaior))
-print("A {} pessoa e mais leve da lista".format(totmenor))
+        if peso > maior:
+            maior = peso
+        if peso < menor:
+                menor = peso
+print("O maior peso lido foi {}".format(maior))
+print("O menor peso lido foi {}".format(menor))
 
 
