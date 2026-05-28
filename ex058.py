@@ -1,24 +1,22 @@
+from operator import truediv
 from random import randint
-computer = randint(0, 10)
-c = 1
-total = 0
-totv = 0
-totp = 0
-while c != computer:
+computador = randint(0,10)
+print("Olá sou seu computador vou pensar em um numero entre 0 e 10")
 
-    computer = randint(0, 10)
-    p = int(input("Digite um numero de 0 a 10: "))
-    if p == computer:
-        print("Meus parábens você acertou!")
-        total +=1
-        totv += 1
-        break
+acertou = False
+palpite = 0
+while not acertou:
+    jogador = int(input("Qual é o seu palpite? "))
+    palpite += 1
+    if jogador == computador:
+        acertou = True
     else:
+        if jogador < computador:
+            print("Mais....tente mais uma vez!")
+        elif jogador > computador:
+            print("Menos....tente mais uma vez!")
+print("Acertou com {} palpites!".format(palpite))
 
-        print("Menos... Tente mais uma vez")
-        total += 1
-        continue
-print("De {} tentativas vc acertou {}".format(total,totv))
 
 
 

@@ -1,10 +1,5 @@
-sexo = 0
+sexo = str(input("Digite o sexo [M/F]: ")).strip().upper()[0]
 
-while sexo != "Mm" and sexo != "Ff":
-    sexo = str(input("Sexo [M/F]: ")).strip().upper()
-    if sexo == "M"or sexo == "F":
-        print("Sexo valido")
-    else:
-        print("Sexo invalido")
-        print("Continue!")
-        continue
+while sexo not in "MmFf":
+   sexo = str(input("dados invalidos por favor digite o sexo [M/F]: ")).strip().upper()[0]
+print("Sexo {} registrado com sucesso".format(sexo))
