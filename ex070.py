@@ -1,9 +1,12 @@
-totpreço = maisprodutos = 0
-
+totpreço = maisprodutos =  0
+menorPreço = float("inf")
+nomeMaisbarato = ' '
 while True:
     print('-'*30)
     print("LOJA SUPER BARATÃO")
     print('-'*30)
+
+
 
 
     nome = str(input('Qual o nome do produto? '))
@@ -15,6 +18,10 @@ while True:
 
     if preço >= 1000:
         maisprodutos += 1
+    if preço < menorPreço:
+        menorPreço = preço
+        nomeMaisbarato = nome
+
 
 
     resp = ' '
@@ -25,4 +32,4 @@ while True:
 
 print(f"O total gasto na compra é {totpreço} ")
 print(f"Tem {maisprodutos} produtos que custam mais de R$1000 ")
-print(f"O produto mais barato é {} ")
+print(f"O produto mais barato é {nomeMaisbarato} com o menor preço de {menorPreço} R$")
