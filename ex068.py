@@ -1,6 +1,5 @@
 from random import randint
 totj = 0
-totp = 0
 while True:
     print("==" * 30)
     print("JOGO DA ADIVINHAÇÃO")
@@ -19,18 +18,19 @@ while True:
     total = n + computador
 
     print(f"O jogador escolheu {n} e o computador {computador} no total é {total} ")
-    if total % 2 == 0:
-        resultado = "P"
-        print("È par!")
-    else:
-        resultado = "I"
-        print("È ímpar!")
-    if pi == resultado:
-        print("O JOGADOR GANHOU")
-        totj += 1
-    else:
-        print("O COMPUTADOR GANHOU!")
-        totp += 1
-        break
-print(f"O jogador ganhou {totj} vezes e o computador ganhou {totj} vezes")
+    if pi == "P":
+        if total % 2 == 0:
+            totj += 1
+            print("Você venceu!")
+        else:
+             print("você perdeu!")
+    elif pi == "I":
+        if total % 2 == 1:
+            totj += 1
+            print("você venceu!")
+        else:
+            print("Voce perdeu!")
+            break
+    print("Vamos jogar novamente...")
+print(f"O jogador ganhou {totj} vezes")
 
