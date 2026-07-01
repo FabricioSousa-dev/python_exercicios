@@ -1,15 +1,29 @@
 from random import randint
+lista = list()
+jogos = list()
+print("-"*30)
+print("     Sorteados        ")
+print("-"*30)
+quant = int(input("Quantos jogos deseja sortear? "))
+tot = 1
+while tot <= quant:
+    cont = 0
+    while True:
+        num = randint(1,60)
+        if num not in lista:
+            lista.append(num)
+            cont += 1
+        if cont >=6:
+            break
+    lista.sort()
+    jogos.append(lista[:])
+    lista.clear()
+    tot += 1
+print("-"*3,f"Sorteando {quant} jogos", "-"*3)
+for i,l in enumerate(jogos):
+    print(f"Jogo {i+1}: {l}")
 
 
-print("==="*30)
-print("Jogo da SORTE")
-print("==="*30)
 
-jogar = int(input("Quantos jogos deseja jogar? "))
-print(f"------Sorteando {jogar} jogos--------")
-for c in range(jogar):
 
-    num = [randint(1, 60), randint(1, 60), randint(1, 60), randint(1, 60), randint(1, 60), randint(1, 60)]
-    num.sort()
-    print(f"Jogo {c+1}: {num}")
 
