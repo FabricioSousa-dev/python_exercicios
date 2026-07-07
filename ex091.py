@@ -1,11 +1,19 @@
 from operator import itemgetter
 from random import randint
+from time import sleep
 
-dados = dict()
-for p in range(1,5):
-    dados[f'jogador{p}'] = randint(1,6)
-for j in dados:
-    print(f'{j} tirou {dados[j]}')
-print("Ranking dos jogadores:")
-for k,v in sorted(dados.items(), key=itemgetter(1), reverse=True):
-    print(f'{k} tirou {v}')
+jogo = {'jogador1': randint(1, 6),
+        'jogador2': randint(1, 6),
+        'jogador3': randint(1, 6),
+        'jogador4': randint(1, 6),
+        }
+ranking = list()
+print("Valores sorteados")
+for k,v in jogo.items():
+    print(f"{k} tirou {v} no dado.")
+    sleep(1)
+ranking = sorted(jogo.items(), key=itemgetter(1),reverse=True)
+print("=-"*30)
+print(f"Ranking dos jogos")
+for i,v in enumerate(ranking):
+    print(f"{i+1} lugar {v[0]} com {v[1]}")
