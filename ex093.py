@@ -23,3 +23,4 @@ print(f"O jogador {futebol['Nome']} jogou {futebol['Partidas']} partidas. ")
 for p in range(0,futebol['Partidas']+1):
     print(f"=> Na partida {p} fez {futebol['Gols'][p]} gols.")
 print(f"Foi um total de {futebol['Total de gols']} gols")
+#teste
