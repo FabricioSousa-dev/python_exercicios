@@ -1,31 +1,32 @@
 pessoas = dict()
 lista = list()
-
+soma = media = 0
 
 while True:
+    pessoas.clear()
     pessoas['Nome'] = str(input("Nome: ")).strip().upper()
     pessoas['Idade'] = int(input("Idade: "))
+    soma += pessoas['Idade']
+    sexo = str(input("Sexo: [M/F]")).strip().upper()[0]
 
-    sexo = ' '
     while sexo not in "FM":
+        print("ERRO! Digite apenas M ou F.")
         sexo = str(input("Sexo: [M/F]")).strip().upper()[0]
-        pessoas['Sexo'] = sexo
-        lista.append(pessoas.copy())
+
+    pessoas['Sexo'] = sexo
+    lista.append(pessoas.copy())
 
 
     opc = str(input("Quer continuar? [S/N]: ")).strip().upper()
     if opc == "N":
         break
 
-soma_idade = 0
-for p in lista:
-    soma_idade += p["Idade"]
 
-media = soma_idade / len(lista)
+media = soma/ len(lista)
 
 print("-=" * 30)
 print(f"A)Tem {len(lista)} pessoas cadastradas.")
-print(f"B)A média de idade do grupo é {media} anos.")
+print(f"B)A média de idade do grupo é {media:5.2f} anos.")
 print(f"C)As mulheres cadastradas foram: ",end='')
 for m in lista:
     if m["Sexo"] == "F":
