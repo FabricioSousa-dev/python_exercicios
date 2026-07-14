@@ -33,7 +33,7 @@ while True:
         print("=-"*30)
         print("Finalizando...")
         break
-    elif m >= len(times):
+    elif m < 0 or m >= len(times):
         print(f"Não existe um jogador com codigo {m}")
     else:
         print(f"         --LEVANTAMENTO DO JOGADOR {times[m]['Nome']}            ")
