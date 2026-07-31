@@ -14,16 +14,17 @@ def leiaDinheiro(mgs):
         else:
             if p.isalpha():
                 print("Erro, digite apenas um número")
-            if p.strip() == '':
+            elif p.strip() == '':
                 print("Erro! valor invalido!")
-            if ',' in p:
+            elif ',' in p:
                 p = p.replace(',', '.')
                 valor = float(p)
                 ok = True
-            if ',' in p:
-                p = p.replace(',','.')
+            elif '.' in p:
                 valor = float(p)
                 ok = True
+            else:
+                print("Erro! valor invalido!")
         if ok:
             break
     return valor
