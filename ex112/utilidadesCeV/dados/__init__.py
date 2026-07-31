@@ -1,4 +1,9 @@
 def leiaDinheiro(mgs):
+    '''
+
+    :param mgs: valor inteiro.
+    :return: retorna o valor inteiro verificado.
+    '''
     ok = False
     valor = 0
     while True:
