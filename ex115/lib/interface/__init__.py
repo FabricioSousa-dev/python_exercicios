@@ -7,7 +7,7 @@ def leiaInt(msg):
             valor = int(n)
             ok = True
         else:
-            print('\033[0;31mErro! digite um número inteiro')
+            print('\033[0;31mErro! Digite um número inteiro válido!\033[m')
         if ok:
             break
     return valor
@@ -15,6 +15,7 @@ def leiaInt(msg):
 
 def linha(tam=42):
     return '-' * tam
+
 
 def cabecalho(txt):
     print(linha())
@@ -26,10 +27,8 @@ def menu(lista):
     cabecalho('MENU DO SISTEMA')
     c = 1
     for item in lista:
-        print(f"{c} -- {item}")
-        c+=1
+        print(f'{c} -- {item}')
+        c += 1
     print(linha())
-    opc = leiaInt("Escolha uma opção: ")
+    opc = leiaInt('Escolha uma opção: ')
     return opc
-
-
